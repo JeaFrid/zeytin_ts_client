@@ -1,0 +1,37 @@
+{
+  "name": "zeytin",
+  "version": "1.0.1",
+  "description": "Zeytin is a high-performance, scalable, and security-focused next-generation server solution that eliminates external database dependencies.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+  "build": "tsc",
+  "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "keywords": [],
+  "author": "JeaFriday",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/form-data": "^2.2.1",
+    "@types/node": "^25.5.0",
+    "@types/ws": "^8.18.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "axios": "^1.13.6",
+    "form-data": "^4.0.5",
+    "ws": "^8.20.0"
+  }
+}
+
