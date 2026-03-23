@@ -72,7 +72,7 @@ export class ZeytinClient {
     this._host = host;
     this._email = email;
     this._password = password;
-    this._axiosInstance = null; // baseURL değişti, instance'ı sıfırla
+    this._axiosInstance = null;
 
     const l = await this._login({ email, password });
 
