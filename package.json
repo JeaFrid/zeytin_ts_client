@@ -1,6 +1,6 @@
 {
   "name": "zeytin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Zeytin is a high-performance, scalable, and security-focused next-generation server solution that eliminates external database dependencies.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
