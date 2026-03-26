@@ -388,7 +388,23 @@ export class ZeytinClient {
       await new Promise<void>((r) => setTimeout(r, delay * 1000));
     }
   }
+  async getAllBoxes(): Promise<ZeytinResponse> {
+    try {
+      const res = await this._axios.post<unknown>('/data/getAllBoxes', { token: this._token });
+      const parsed = this._parseResponse(res.data);
+      const zResponse = ZeytinResponse.fromMap(parsed, this._password);
+      if (zResponse.isSuccess && zResponse.data != null) {
+        return new ZeytinResponse({ isSuccess: true, message: 'Oki doki!', data: zResponse.data });
+      }
+      return zResponse;
+    } catch (e) {
+      return this._errorResponse('Opss...', String(e));
+    }
+  }
 
+  async getAllTags(params: { box: string }): Promise<ZeytinResponse> {
+    return this._encryptedPost('/data/getAllTags', { box: params.box });
+  }
   async checkLiveCall(params: { roomName: string }): Promise<ZeytinResponse> {
     if (this._token === '') return this._errorResponse('Auth token required.');
     try {

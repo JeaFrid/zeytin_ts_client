@@ -1,6 +1,6 @@
 {
   "name": "zeytin",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Zeytin is a high-performance, scalable, and security-focused next-generation server solution that eliminates external database dependencies.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,8 +8,8 @@
     "dist"
   ],
   "scripts": {
-  "build": "tsc",
-  "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "exports": {
     ".": {
@@ -34,4 +34,3 @@
     "ws": "^8.20.0"
   }
 }
-
